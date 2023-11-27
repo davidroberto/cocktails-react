@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import Header from "../component/Header";
+import { Link } from "react-router-dom";
+import CocktailCard from "../component/CocktailCard";
 
 function CocktailRandomPage() {
   const [coktailRandom, setCocktailRandom] = useState(null);
@@ -20,16 +23,12 @@ function CocktailRandomPage() {
   }, []);
 
   return (
-    <main>
-      {coktailRandom !== null ? (
-        <article>
-          <h1>{coktailRandom.strDrink}</h1>
-          <img src={coktailRandom.strDrinkThumb} alt={coktailRandom.strDrink} />
-        </article>
-      ) : (
-        <p>Cocktail en chargement</p>
-      )}
-    </main>
+    <>
+      <Header />
+      <main>
+        {coktailRandom !== null ? <CocktailCard cocktailToDisplay={coktailRandom} /> : <p>Cocktail en chargement</p>}
+      </main>
+    </>
   );
 }
 

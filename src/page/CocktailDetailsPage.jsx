@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Header from "../component/Header";
 
 function CocktailDetailsPage() {
   const { id } = useParams();
@@ -16,18 +17,21 @@ function CocktailDetailsPage() {
   }, []);
 
   return (
-    <main>
-      {cocktail ? (
-        <article>
-          <h2>{cocktail.strDrink}</h2>
-          <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
-          <p>Categorie : {cocktail.strCategory}</p>
-          <p>Instructions : {cocktail.strInstructions}</p>
-        </article>
-      ) : (
-        <p>Pas de cocktail</p>
-      )}
-    </main>
+    <>
+      <Header />
+      <main>
+        {cocktail ? (
+          <article>
+            <h2>{cocktail.strDrink}</h2>
+            <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
+            <p>Categorie : {cocktail.strCategory}</p>
+            <p>Instructions : {cocktail.strInstructions}</p>
+          </article>
+        ) : (
+          <p>Pas de cocktail</p>
+        )}
+      </main>
+    </>
   );
 }
 

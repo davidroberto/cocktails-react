@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Header from "../component/Header";
 
 function IngredientsPage() {
   const [ingredients, setIngredients] = useState(null);
@@ -13,17 +14,20 @@ function IngredientsPage() {
   }, []);
 
   return (
-    <main>
-      {ingredients ? (
-        <section>
-          {ingredients.map((ingredient) => {
-            return <article>{ingredient.strIngredient1}</article>;
-          })}
-        </section>
-      ) : (
-        <p>Pas d'ingredients</p>
-      )}
-    </main>
+    <>
+      <Header />
+      <main>
+        {ingredients ? (
+          <section>
+            {ingredients.map((ingredient) => {
+              return <article>{ingredient.strIngredient1}</article>;
+            })}
+          </section>
+        ) : (
+          <p>Pas d'ingredients</p>
+        )}
+      </main>
+    </>
   );
 }
 
