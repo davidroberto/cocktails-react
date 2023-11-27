@@ -20,6 +20,9 @@ function Header() {
           <li>
             <Link to="/ingredients">Ingrédients</Link>
           </li>
+          <li>
+            <Link to="/cocktails/create">Créer un cocktail</Link>
+          </li>
         </ul>
       </nav>
     </header>

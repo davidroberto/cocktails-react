@@ -7,6 +7,7 @@ import IngredientsPage from "./page/IngredientsPage";
 import CocktailDetailsPage from "./page/CocktailDetailsPage";
 
 import "./App.css";
+import CreateCocktailPage from "./page/CreateCocktailPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/categories" element={<CategoriesPage />} />
         <Route path="/ingredients" element={<IngredientsPage />} />
         <Route path="/cocktails/details/:id" element={<CocktailDetailsPage />} />
+        <Route path="/cocktails/create" element={<CreateCocktailPage />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Header from "../component/Header";
-import { Link } from "react-router-dom";
 import CocktailCard from "../component/CocktailCard";
 
 function CocktailRandomPage() {
