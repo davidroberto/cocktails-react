@@ -24,11 +24,11 @@ function CocktailsPage() {
       <Header />
       <main>
         {cocktails ? (
-          <>
+          <div className="cocktails-container">
             {cocktails.map((cocktail) => {
               return <CocktailCard cocktailToDisplay={cocktail} />;
             })}
-          </>
+          </div>
         ) : (
           <img src="https://media4.giphy.com/media/3o7bu3XilJ5BOiSGic/giphy.gif" alt="spinner" />
         )}

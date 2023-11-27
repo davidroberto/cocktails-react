@@ -6,6 +6,8 @@ import CategoriesPage from "./page/CategoriesPage";
 import IngredientsPage from "./page/IngredientsPage";
 import CocktailDetailsPage from "./page/CocktailDetailsPage";
 
+import "./App.css";
+
 function App() {
   return (
     <BrowserRouter>
